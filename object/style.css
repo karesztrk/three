@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100vh;
+  background-color: #1b1b1b;
+}
+
+.object {
+  position: absolute;
+  top: 0;
+  left: 0;
+  outline: none;
+  z-index: 0;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.container:nth-child(2) {
+  align-items: center;
+}
+
+h1 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 6.5rem;
+  text-transform: uppercase;
+  color: white;
+  padding: 7rem 0;
+}
