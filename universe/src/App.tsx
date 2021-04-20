@@ -9,7 +9,7 @@ const App: FC<AppProps> = () => {
   return (
     <div className="App">
       <h1>Mars</h1>
-      <h2>The red planet</h2>
+      <h2>The red planet and its imaginary moon</h2>
       <Canvas
         style={{
           position: 'absolute',
