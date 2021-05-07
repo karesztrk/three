@@ -1,27 +1,17 @@
 import * as dat from 'dat.gui';
 import {
+  AmbientLight,
   Clock,
-  DoubleSide,
+  DirectionalLight,
+  IcosahedronBufferGeometry,
   Mesh,
+  MeshPhongMaterial,
   PCFSoftShadowMap,
   PerspectiveCamera,
   Scene,
-  ShaderMaterial,
   WebGLRenderer,
-  IcosahedronBufferGeometry,
-  MeshPhongMaterial,
-  AmbientLight,
-  DirectionalLight,
-  MeshNormalMaterial,
-  PointLight,
-  PointLightHelper,
-  SphereBufferGeometry,
-  MeshBasicMaterial,
 } from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
-import testVertexShader from './shaders/vertex.glsl';
-import testFragmentShader from './shaders/fragment.glsl';
-import { CustomMaterial } from './CustomMaterial';
 
 const sizes = {
   width: window.innerWidth,
@@ -45,34 +35,15 @@ const gui = new dat.GUI({ closed: false });
 
 const debug = {
   displacement: 0.05,
-  elevation: 0.2,
+  elevation: 15,
+  elevationFilter: 0.01,
   speed: 2,
 };
 
-const meshMaterial = new CustomMaterial({
+const meshMaterial = new MeshPhongMaterial({
   wireframe: false,
-  displacement: debug.displacement,
-  elevation: debug.elevation,
-  speed: debug.speed,
 });
-const geometry = new IcosahedronBufferGeometry(0.75, 0);
-const material = new ShaderMaterial({
-  vertexShader: testVertexShader,
-  fragmentShader: testFragmentShader,
-  side: DoubleSide,
-  wireframe: true,
-  uniforms: {
-    displacement: {
-      value: debug.displacement,
-    },
-    elevation: {
-      value: debug.elevation,
-    },
-    speed: {
-      value: debug.speed,
-    },
-  },
-});
+const geometry = new IcosahedronBufferGeometry(0.04, 0);
 
 gui
   .add(debug, 'displacement')
@@ -89,11 +60,22 @@ gui
   .add(debug, 'elevation')
   .name('wave elevation')
   .min(0.0)
-  .max(5.0)
+  .max(20.0)
   .step(0.01)
   .onChange((elevation) => {
     if (meshMaterial.userData.shader) {
       meshMaterial.userData.shader.uniforms.elevation.value = elevation;
+    }
+  });
+gui
+  .add(debug, 'elevationFilter')
+  .name('wave filter')
+  .min(0.0)
+  .max(5.0)
+  .step(0.01)
+  .onChange((elevationFilter) => {
+    if (meshMaterial.userData.shader) {
+      meshMaterial.userData.shader.uniforms.elevationFilter.value = elevationFilter;
     }
   });
 gui
@@ -115,6 +97,9 @@ meshMaterial.onBeforeCompile = function (shader) {
   shader.uniforms.displacement = {
     value: debug.displacement,
   };
+  shader.uniforms.elevationFilter = {
+    value: debug.elevationFilter,
+  };
   shader.uniforms.elevation = {
     value: debug.elevation,
   };
@@ -126,13 +111,14 @@ meshMaterial.onBeforeCompile = function (shader) {
     `uniform float time;
     uniform float displacement;
     uniform float elevation;
+    uniform float elevationFilter;
     uniform float speed;\n` + shader.vertexShader;
   shader.vertexShader = shader.vertexShader.replace(
     '#include <begin_vertex>',
     [
       'float factor = abs(sin(time)) * displacement;',
       'vec3 offset = normal * factor;',
-      'float waveY = abs(sin(position.y + time * speed)) * elevation;',
+      'float waveY = abs(sin(position.y * elevation + time * speed)) * elevationFilter;',
       'vec3 transformed = vec3(position + waveY * offset);',
     ].join('\n'),
   );
@@ -141,7 +127,7 @@ meshMaterial.onBeforeCompile = function (shader) {
 };
 const mesh = new Mesh(geometry, meshMaterial);
 scene.add(mesh);
-
+mesh.scale.set(20, 20, 20);
 const ambientLight = new AmbientLight(0xffffff, 0.3);
 scene.add(ambientLight);
 
@@ -152,14 +138,6 @@ scene.add(directionLight);
 const camera = new PerspectiveCamera(75, ratio, 0.1, 100);
 camera.position.set(0, 0, 2);
 scene.add(camera);
-const a = new Mesh(
-  new IcosahedronBufferGeometry(0.75),
-  new MeshBasicMaterial({
-    color: 0xfd0404,
-  }),
-);
-a.position.set(0, 0, 0);
-scene.add(a);
 
 const canvas = document.querySelector('#webgl') as HTMLCanvasElement;
 
