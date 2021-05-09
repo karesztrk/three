@@ -1,0 +1,14 @@
+@font-face {
+  font-family: 'Skoda Next';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./fonts/SKODANext-Regular.woff2') format('woff2');
+}
+
+body {
+  font-family: 'Skoda Next';
+  margin: 0;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

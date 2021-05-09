@@ -1,0 +1,417 @@
+{
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5123,
+      "count": 2118,
+      "name": "accessorIndices",
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 2118,
+      "max": [346.574951, 148.177216, 77.1624146],
+      "min": [18.4219513, 91.12756, -77.1624146],
+      "name": "accessorPositions",
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 25416,
+      "componentType": 5126,
+      "count": 2118,
+      "name": "accessorNormals",
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 2118,
+      "name": "accessorUVs",
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 4236,
+      "componentType": 5123,
+      "count": 27165,
+      "name": "accessorIndices",
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 50832,
+      "componentType": 5126,
+      "count": 27165,
+      "max": [345.1974, 114.6702, 99.7089539],
+      "min": [-93.881, -22.0909481, -99.7089844],
+      "name": "accessorPositions",
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 376812,
+      "componentType": 5126,
+      "count": 27165,
+      "name": "accessorNormals",
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 16944,
+      "componentType": 5126,
+      "count": 27165,
+      "name": "accessorUVs",
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 58568,
+      "componentType": 5123,
+      "count": 21663,
+      "name": "accessorIndices",
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 702792,
+      "componentType": 5126,
+      "count": 21663,
+      "max": [345.7661, 115.394485, 88.479],
+      "min": [-92.20471, -30.292202, -88.479],
+      "name": "accessorPositions",
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 962748,
+      "componentType": 5126,
+      "count": 21663,
+      "name": "accessorNormals",
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 234264,
+      "componentType": 5126,
+      "count": 21663,
+      "name": "accessorUVs",
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 101896,
+      "componentType": 5123,
+      "count": 1077,
+      "name": "accessorIndices",
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 1222704,
+      "componentType": 5126,
+      "count": 1077,
+      "max": [329.899719, 111.405533, 73.74289],
+      "min": [5.808485, 60.54678, -73.74289],
+      "name": "accessorPositions",
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 1235628,
+      "componentType": 5126,
+      "count": 1077,
+      "name": "accessorNormals",
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 407568,
+      "componentType": 5126,
+      "count": 1077,
+      "name": "accessorUVs",
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 104052,
+      "componentType": 5123,
+      "count": 222,
+      "name": "accessorIndices",
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 1248552,
+      "componentType": 5126,
+      "count": 222,
+      "max": [-33.10936, 80.80037, 80.7054443],
+      "min": [-74.0508, 62.8575439, -80.7054443],
+      "name": "accessorPositions",
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 1251216,
+      "componentType": 5126,
+      "count": 222,
+      "name": "accessorNormals",
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 416184,
+      "componentType": 5126,
+      "count": 222,
+      "name": "accessorUVs",
+      "type": "VEC2"
+    }
+  ],
+  "asset": {
+    "generator": "babylon.js glTF exporter for 3ds max 2019 v1.3.14",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 104496,
+      "name": "bufferViewScalar"
+    },
+    {
+      "buffer": 0,
+      "byteLength": 1253880,
+      "byteOffset": 104496,
+      "byteStride": 12,
+      "name": "bufferViewFloatVec3"
+    },
+    {
+      "buffer": 0,
+      "byteLength": 417960,
+      "byteOffset": 1358376,
+      "byteStride": 8,
+      "name": "bufferViewFloatVec2"
+    },
+    {
+      "buffer": 0,
+      "byteLength": 1,
+      "byteOffset": 0,
+      "name": "bufferViewImage"
+    },
+    {
+      "buffer": 0,
+      "byteLength": 1,
+      "byteOffset": 0,
+      "name": "bufferViewImage"
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 1776336,
+      "uri": "Scala.bin"
+    }
+  ],
+  "images": [
+    {
+      "uri": "image0.png"
+    },
+    {
+      "uri": "image1.jpg"
+    }
+  ],
+  "materials": [
+    {
+      "alphaMode": "BLEND",
+      "emissiveFactor": [0.0, 0.0, 0.0],
+      "name": "Scala_skla_",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [0.5, 0.5, 0.5, 0.9],
+        "baseColorTexture": {
+          "index": 0,
+          "texCoord": 0
+        },
+        "metallicFactor": 0.0,
+        "roughnessFactor": 0.0
+      }
+    },
+    {
+      "alphaMode": "OPAQUE",
+      "emissiveFactor": [0.0, 0.0, 0.0],
+      "name": "Scala_body",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [0.5, 0.5, 0.5, 1.0],
+        "baseColorTexture": {
+          "index": 1,
+          "texCoord": 0
+        },
+        "metallicFactor": 0.0,
+        "roughnessFactor": 0.0
+      }
+    },
+    {
+      "alphaMode": "OPAQUE",
+      "emissiveFactor": [0.0, 0.0, 0.0],
+      "name": "Scala_body_noR",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [1.0, 1.0, 1.0, 1.0],
+        "baseColorTexture": {
+          "index": 1,
+          "texCoord": 0
+        },
+        "metallicFactor": 0.0,
+        "roughnessFactor": 0.9
+      }
+    },
+    {
+      "alphaMode": "BLEND",
+      "emissiveFactor": [0.0, 0.0, 0.0],
+      "name": "Scala_skla_svetla_",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [0.0509803966, 0.0509803966, 0.0509803966, 0.5],
+        "metallicFactor": 0.0,
+        "roughnessFactor": 0.0
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "Scala_skla_",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 1,
+            "NORMAL": 2,
+            "TEXCOORD_0": 3
+          },
+          "indices": 0,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "Scala_body_",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 5,
+            "NORMAL": 6,
+            "TEXCOORD_0": 7
+          },
+          "indices": 4,
+          "material": 1,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "Scala_bodyB_",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 9,
+            "NORMAL": 10,
+            "TEXCOORD_0": 11
+          },
+          "indices": 8,
+          "material": 2,
+          "mode": 4
+        },
+        {
+          "attributes": {
+            "POSITION": 13,
+            "NORMAL": 14,
+            "TEXCOORD_0": 15
+          },
+          "indices": 12,
+          "material": 1,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "Scala_skla_svetla_",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 17,
+            "NORMAL": 18,
+            "TEXCOORD_0": 19
+          },
+          "indices": 16,
+          "material": 3,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "mesh": 0,
+      "name": "Scala_skla_",
+      "rotation": [0.0, 0.0, 0.0, 1.0],
+      "scale": [1.0, 1.0, 1.0],
+      "translation": [0.0, 0.0, 0.0]
+    },
+    {
+      "mesh": 1,
+      "name": "Scala_body_",
+      "rotation": [0.0, 0.0, 0.0, 1.0],
+      "scale": [1.0, 1.0, 1.0],
+      "translation": [8.968872, 29.92313, 1.08499978e-6]
+    },
+    {
+      "mesh": 2,
+      "name": "Scala_bodyB_",
+      "rotation": [0.0, 0.0, 0.0, 1.0],
+      "scale": [1.0, 1.0, 1.0],
+      "translation": [8.968872, 29.92313, 1.08499978e-6]
+    },
+    {
+      "mesh": 3,
+      "name": "Scala_skla_svetla_",
+      "rotation": [0.0, 0.0, 0.0, 1.0],
+      "scale": [1.0, 1.0, 1.0],
+      "translation": [0.0, 0.0, 0.0]
+    },
+    {
+      "name": "Default light",
+      "rotation": [0.0, 0.0, 0.0, 1.0],
+      "scale": [1.0, 1.0, 1.0],
+      "translation": [0.0, 0.0, 0.0]
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9729,
+      "minFilter": 9987,
+      "wrapS": 10497,
+      "wrapT": 10497
+    },
+    {
+      "magFilter": 9729,
+      "minFilter": 9987,
+      "wrapS": 10497,
+      "wrapT": 10497
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "extensions": {},
+      "nodes": [0, 1, 2, 3, 4]
+    }
+  ],
+  "textures": [
+    {
+      "name": "Scala_1k229_baseColor.png",
+      "sampler": 0,
+      "source": 0
+    },
+    {
+      "name": "Scala_1k.jpg",
+      "sampler": 1,
+      "source": 1
+    }
+  ]
+}
