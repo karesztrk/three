@@ -20,6 +20,7 @@ const App: FC<AppProps> = () => {
           position: [-150, 175, 500],
         }}
         style={{ position: 'absolute' }}
+        shadows
       >
         <Suspense fallback="Loading...">
           <Scene />
